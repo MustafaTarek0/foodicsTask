@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="44.995">
+<testcase classname="amazon" name="user should be able to add items in amazon" time="37.163">
+<system-out><![CDATA[Given user navigate to amazon EG............................................passed
+Given user click on sign in.................................................passed
+And user insert phone number "+4915755457595"...............................passed
+And user clicks continue....................................................passed
+And user insert password "@Desha0097".......................................passed
+And user clicks sign in.....................................................passed
+When user clicks on all side menu...........................................passed
+And user clicks on see all..................................................passed
+And user clicks on video games "Video Games"................................passed
+And user clicks on all video games "Xbox One"...............................passed
+Then user verifies that he is navigated to all video games page.............passed
+When user clicks on free shipping checkbox..................................passed
+And user clicks on new condition............................................passed
+And user clicks on sort by dropdown list....................................passed
+And user sorts by high to low price "Price: Low to High"....................passed
+And user randomly selects a product below 15000 and if not available he will click next page then repeat searching then clicks on cart to make sure that it's already added.passed
+And user clicks on add to cart..............................................passed
+Then user should be navigated to cart page..................................passed
+And user validates that the cart isn't empty................................passed
+And user validate that's proceed to buy is visible..........................passed
+When user clicks on proceed to buy button...................................passed
+Then user validates that value payment method is visible....................passed
+When user clicks on value payment method radio button.......................passed
+Then user validates that change delivery address is visible.................passed
+When user clicks on change delivery address button..........................passed
+Then add new delivery address button should be displayed....................passed
+When user clicks on new delivery address button.............................passed
+And user insert full name "mustafa".........................................passed
+And user insert full mobileNumber "1063710097"..............................passed
+And user insert street name "test"..........................................passed
+And user insert building name "testing".....................................passed
+And user insert city "cairo"................................................passed
+And user insert district "Settlement)"......................................passed
+And user insert Governorate "cairo".........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a user via API using POST request" name="Successfully create a user with valid JSON payload" time="6.328">
+<system-out><![CDATA[Given the API base URL is set...............................................passed
+And I have the JSON payload from file "postApiData".........................passed
+When I send a "post" request to "/api/users"................................passed
+Then the response status code should be "201"...............................passed
+And the response should contain a user ID ,email ,firstName ,lastName , avatar , updated At.passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a user via API using POST request" name="Successfully get all users" time="0.637">
+<system-out><![CDATA[Given the API base URL is set...............................................passed
+When I send a "get" request to "/api/users/2"...............................passed
+Then the response status code should be "200"...............................passed
+And the response should contain a user ID ,email ,firstName ,lastName , avatar , avatar.passed
+]]></system-out>
+</testcase>
+<testcase classname="Create a user via API using POST request" name="Successfully update a user with valid JSON payload" time="0.557">
+<system-out><![CDATA[Given the API base URL is set...............................................passed
+And I have the JSON payload from file "putApiData"..........................passed
+When I send a "put" request to "/api/users/2"...............................passed
+Then the response status code should be "200"...............................passed
+And the response should contain a user ID ,email ,firstName ,lastName , avatar , updated At.passed
+]]></system-out>
+</testcase>
+</testsuite>

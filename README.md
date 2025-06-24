@@ -43,7 +43,7 @@ Execute the tests using your IDE or via Maven commands.
 6.View Reports:
 Test reports are generated using the Cucumber runner and saved in the target/ directory.
 
-Scenarios Covered
+## Scenarios Covered
 
 UI Automation
 
@@ -63,7 +63,7 @@ API Automation
 A generic method is implemented to execute API requests based on parameters such as method type and JSON file input.
 
 
-📁 Project Structure 
+## 📁 Project Structure 
 
 
 config/ – Loads configuration settings (e.g., base URL).

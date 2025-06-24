@@ -17,14 +17,14 @@ public class amazonHomeStepDef {
 
     WebDriverWait wait = new WebDriverWait(Hooks.driver, Duration.ofSeconds(10));
     @Given("user navigate to amazon EG")
-    public void userNavigateToGoogle() throws InterruptedException {
+    public void userNavigateToAmazon() throws InterruptedException {
         Hooks.driver.get("https://www.amazon.eg/?language=en_AE");
         Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://www.amazon.eg/?language=en_AE");
     }
 
 
     @When("user clicks on all side menu")
-    public void userTypesInGoogleSearchBar() throws InterruptedException {
+    public void userClicksOnAllSideMenu() throws InterruptedException {
         home.getSideMenu().click();
     }
 
